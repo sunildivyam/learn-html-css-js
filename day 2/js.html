@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learning JS</title>
+  <script>
+    function greetMe() {
+      var mynameEl = document.getElementById('myname');
+      mynameEl.innerHTML = 'Divyam';
+      mynameEl.style.color = '#33ff22';
+      mynameEl.style.fontSize = '20px';
+    }
+  </script>
+</head>
+<body>
+  <div>Hello <span id="myname">Dude</span></div>
+  <button onclick="greetMe()">Greet</button>
+</body>
+</html>
