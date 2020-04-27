@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Odd Even</title>
+  <script>
+    function oddEven() {
+      var nEl = document.getElementById('num');
+      var n = parseInt(nEl.value);
+      var remainder = n % 2;
+      var msgEl = document.getElementById('message');
+
+      if (remainder === 0) {
+        msgEl.innerHTML = 'This is Even';
+      } else {
+        msgEl.innerHTML = 'This is Odd';
+      }
+    }
+  </script>
+</head>
+
+<body>
+  <H1>Odd Even Program</H1>
+  <input id="num" type="number" />
+  <button onclick="oddEven()">Tell me Odd or Even?</button>
+  <span id="message"></span>
+</body>
+
+</html>

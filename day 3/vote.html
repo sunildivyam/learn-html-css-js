@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voter Verification Program</title>
+  <style>
+    input, button {
+      font-size: 20px;
+      padding: 10px;
+    }
+  </style>
+  <script>
+    function canVote() {
+      var firstNameEl = document.getElementById('first-name');
+      var lastNameEl = document.getElementById('last-name');
+      var cityEl = document.getElementById('city');
+      var ageEl = document.getElementById('age');
+      var msgEl = document.getElementById('message');
+      var voter = {
+        firstName: firstNameEl.value,
+        lastName: lastNameEl.value,
+        age: parseInt(ageEl.value),
+        city: cityEl.value
+      };
+
+      if (voter.age >= 18) {
+        msgEl.innerHTML = 'Mr. ' + voter.firstName + ' ' + voter.lastName + ', You can vote!';
+      } else {
+        msgEl.innerHTML = 'Mr. ' + voter.firstName + ' ' + voter.lastName + ', You can not vote because you are under 18 years of age.';
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Voter Verification Program</h1>
+  <input id="first-name" type="text"/>
+  <input id="last-name" type="text"/>
+  <input id="city" type="text"/>
+  <input id="age" type="number"/>
+  <button onclick="canVote()">Verify status</button>
+  <div id="message"></div>
+</body>
+</html>
